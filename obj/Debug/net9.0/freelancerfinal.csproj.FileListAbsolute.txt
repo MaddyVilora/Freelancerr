@@ -1,0 +1,4 @@
+C:\Users\user\source\repos\freelancerfinal\obj\Debug\net9.0\freelancerfinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\freelancerfinal\obj\Debug\net9.0\freelancerfinal.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\freelancerfinal\obj\Debug\net9.0\freelancerfinal.AssemblyInfo.cs
+C:\Users\user\source\repos\freelancerfinal\obj\Debug\net9.0\freelancerfinal.csproj.CoreCompileInputs.cache

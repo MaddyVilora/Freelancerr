@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CustomerMasterPage.master.cs" Inherits="freelancerfinal.Customer.CustomerMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <%--footer--%>
+                    <footer class="bg-gray-800 text-white w-full py-6 mt-10">
+                <div class="text-center">
+                    <p>&copy; 2024  All rights reserved to Vilora Technologies</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-blue-400 hover:underline mx-2">Privacy Policy</a>
+                        <a href="#" class="text-blue-400 hover:underline mx-2">Terms of Service</a>
+                    </div>
+                </div>
+            </footer>
+    </form>
+
+
+</body>
+</html>

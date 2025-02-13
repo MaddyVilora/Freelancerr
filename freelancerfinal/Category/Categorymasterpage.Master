@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Categorymasterpage.master.cs" Inherits="freelancerfinal.Category.Categorymasterpage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="min-h-screen flex flex-col">
+            <!-- Navigation Bar -->
+            <nav class="bg-gray-800 text-white p-4">
+                <h1 class="text-xl font-bold">FreeLancer</h1>
+            </nav>
+            
+            <!-- Main Content Layout -->
+            <div class="md:flex md:space-x-10 grid grid-col-2">
+                <!-- Sidebar for Filters (Left) -->
+                <div class="bg-white shadow-lg rounded-lg w-full p-6 md:w-[300px] min-h-screen mt-4">
+                    <div class="grid grid-cols-2 gap-2 md:flex flex-col">
+                        <div>
+                            <asp:Label runat="server" Text="Category" CssClass="font-md font-bold"></asp:Label>
+                            <asp:DropDownList ID="ddl_subcategory" CssClass="bg-white w-full px-3 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-3" runat="server">
+                                <asp:ListItem Value="">Please Select</asp:ListItem>
+                                <asp:ListItem>Car Driver</asp:ListItem>
+                                <asp:ListItem>Lorry Driver</asp:ListItem>
+                                <asp:ListItem>Van Driver</asp:ListItem>
+                                <asp:ListItem>Auto Driver</asp:ListItem>
+                                <asp:ListItem>Bus Driver</asp:ListItem>
+                                <asp:ListItem>Tempo Driver</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div>
+                            <asp:Label runat="server" Text="Location" CssClass="font-md font-bold"></asp:Label>
+                            <asp:DropDownList ID="ddl_location" CssClass="bg-white w-full px-3 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-3" runat="server">
+                                <asp:ListItem Value="">Please Select</asp:ListItem>
+                                <asp:ListItem>Pondicherry</asp:ListItem>
+                                <asp:ListItem>Chennai</asp:ListItem>
+                                <asp:ListItem>Madurai</asp:ListItem>
+                                <asp:ListItem>Bangalore</asp:ListItem>
+                                <asp:ListItem>Trichy</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div>
+                            <asp:Label runat="server" Text="Experience" CssClass="font-md font-bold"></asp:Label>
+                            <asp:DropDownList ID="ddl_experience" CssClass="bg-white w-full px-3 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-3" runat="server">
+                                <asp:ListItem Value="">Please Select</asp:ListItem>
+                                <asp:ListItem>1 year</asp:ListItem>
+                                <asp:ListItem>3 year</asp:ListItem>
+                                <asp:ListItem>5 year</asp:ListItem>
+                                <asp:ListItem>8 year</asp:ListItem>
+                                <asp:ListItem>10 year</asp:ListItem>
+                                <asp:ListItem>12 year</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div>
+                            <asp:Label runat="server" Text="Rating" CssClass="font-md font-bold"></asp:Label>
+                            <asp:DropDownList ID="ddl_rating" CssClass="bg-white w-full px-3 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-3" runat="server">
+                                <asp:ListItem Value="">Please Select</asp:ListItem>
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                                <asp:ListItem>4</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div>
+                            <asp:Label runat="server" Text="Charges (Per Day)" CssClass="font-md font-bold"></asp:Label>
+                            <asp:DropDownList ID="ddl_charges" CssClass="bg-white w-full px-3 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-3" runat="server">
+                                <asp:ListItem Value="">Please Select</asp:ListItem>
+                                <asp:ListItem>800/-</asp:ListItem>
+                                <asp:ListItem>900/-</asp:ListItem>
+                                <asp:ListItem>1000/-</asp:ListItem>
+                                <asp:ListItem>1200/-</asp:ListItem>
+                                <asp:ListItem>1500/-</asp:ListItem>
+                                <asp:ListItem>2000/-</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div class="mt-10">
+                            <button class="text-white bg-[#19A2E6] hover:bg-[#19A2E6] focus:ring-4 focus:ring-[#19A2E6] font-roboto rounded-lg px-5 py-2.5 mb-2 font-bold w-full text-lg" runat="server">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <a class="ml-4" href="../Customer/login.aspx">Log Out</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Area (Right) -->
+                <div class="flex-1 bg-white p-6 shadow-lg rounded-lg">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg-gray-800 text-white py-6 mt-10">
+                <div class="text-center">
+                    <p>&copy; 2024 All rights reserved to Vilora Technologies</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-blue-400 hover:underline mx-2">Privacy Policy</a>
+                        <a href="#" class="text-blue-400 hover:underline mx-2">Terms of Service</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
+
